@@ -1,6 +1,7 @@
 # S3 bucket
 resource "aws_s3_bucket" "bucket" {
   bucket = "${var.app_env}-s3-sqs-bucket-12042024"
+  force_destroy = true # all objects (including any locked objects) should be deleted from the bucket when the bucket is destroyed.
 }
 
 # S3 bucket notification configuration to SQS queue.
