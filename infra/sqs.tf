@@ -6,6 +6,8 @@
 resource "aws_sqs_queue" "queue" {
   name = "${var.app_env}-s3-event-notification-queue"
 
+  delay_seconds = 20  # (Optional) The time in seconds that the delivery of all messages in the queue will be delayed; default = 0 seconds.
+
   # Explicit permissions to enable access for sending messages to SQS queue.
   policy = jsonencode({ # jsonencode -> function that encodes a given value to a string using JSON syntax.
     Version = "2012-10-17",
