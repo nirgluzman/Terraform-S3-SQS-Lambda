@@ -6,10 +6,13 @@
 
 - Using Lambda with Amazon SQS: https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html
 
-- Terraform Remote State Backend
-  https://hackernoon.com/deploying-a-terraform-remote-state-backend-with-aws-s3-and-dynamodb
+- Monitoring Amazon SQS queues using CloudWatch
+  https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-monitoring-using-cloudwatch.html
 
 ## Terraform / Remote Backend with S3 & DynamoDB - Environment Variables
+
+- Remote backend:
+  https://hackernoon.com/deploying-a-terraform-remote-state-backend-with-aws-s3-and-dynamodb
 
 - The configuration for the `backend` cannot use variables or reference locals or data sources,
   because the backend block is evaluated before any variables are processed.
